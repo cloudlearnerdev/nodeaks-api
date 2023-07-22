@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeaks-api
+  labels:
+    app: nodeaks-api
+  namespace: nodeapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodeaks-api
+  template:
+    metadata:
+      labels:
+        app: nodeaks-api
+    spec:
+      containers:
+        - name: nodeaks-api
+          image: testdemoacrapp.azurecr.io/nodeapiimage:latest
+          ports:
+            - containerPort: 3000
