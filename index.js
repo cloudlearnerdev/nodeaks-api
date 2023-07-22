@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.get("/empinformationid", (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-    res.json({"EMPID": 1, "Name" : "Justin Laws","Age" : 34, "City" :"Jacksonville", "State" : "NC", "Zip" : 28540});
+    res.json({"EMPID": 1, "Name" : "Name","Age" : 24, "City" :"City", "State" : "State", "Zip" : 28540});
 });
 
 app.post("/empinformationid", (req,res) => {
