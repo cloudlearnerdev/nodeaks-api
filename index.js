@@ -8,12 +8,12 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/empinformation", (req, res) => {
+app.get("/empinformationid", (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.json({"EMPID": 1, "Name" : "Justin Laws","Age" : 34, "City" :"Jacksonville", "State" : "NC", "Zip" : 28540});
 });
 
-app.post("/empinformation", (req,res) => {
+app.post("/empinformationid", (req,res) => {
     const id = uuid();
     const {
         Name,
