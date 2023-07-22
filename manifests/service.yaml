@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeaks-api
+  namespace: nodeapi
+spec:
+  type: LoadBalancer
+  selector:
+    app: nodeaks-api
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
